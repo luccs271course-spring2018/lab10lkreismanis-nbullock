@@ -13,7 +13,7 @@ apply plugin: 'com.github.ben-manes.versions'
 //apply plugin: 'com.github.sherter.google-java-format'
 
 libsDirName = 'lib' // simple workaround for error in startScripts task
-mainClassName = 'edu.luc.cs.cs271.lab2.Main' // TODO change this setting to match your main class
+mainClassName = 'edu.luc.cs271.lab10.Main' // TODO change this setting to match your main class
 
 jar {
     manifest {
@@ -27,6 +27,7 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.+'
+    'org.jgrapht:jgrapht-core:jar:1.1.0'
     compile 'org.jgrapht:jgrapht-core:1.1.0'
 }
 

@@ -1,5 +1,5 @@
 //larisakreismanis
-package lab10;
+package edu.luc.cs271.lab10;
 
 import java.util.*;
 import org.jgrapht.*;
@@ -9,7 +9,7 @@ import org.jgrapht.graph.*;
 import org.jgrapht.traverse.*;
 
 
-public class GeoGraphMain{
+public class Main {
     
     
     static final String IL = "Illinois";
@@ -56,5 +56,40 @@ public class GeoGraphMain{
             final String state = BF2.next();
             System.out.println(state);
         }
+        final Iterator<String> CS = new ClosestFirstIterator<>(GeoGraph, IL);
+        while(CS.hasNext()){
+            final String state = CS.next();
+            System.out.println(state);
+        }
+        final Iterator<String> CS2 = new ClosestFirstIterator<>(GeoGraph, IN);
+        while(CS2.hasNext()){
+            final String state = CS2.next();
+            System.out.println(state);
+        }
+        final Iterator<String> DF = new DepthFirstIterator<>(GeoGraph, IL);
+        while(DF.hasNext()){
+            final String state = DF.next();
+            System.out.println(state);
+        }
+        final Iterator<String> DF2 = new DepthFirstIterator<>(GeoGraph, IN);
+        while(DF2.hasNext()){
+            final String state = DF2.next();
+            System.out.println(state);
+        }
+        final Iterator<String> RW = new RandomWalkIterator<>(GeoGraph, IL, false, 9);
+        while(RW.hasNext()){
+            final String state = RW.next();
+            System.out.println(state);
+        }
+        final Iterator<String> RW2 = new RandomWalkIterator<>(GeoGraph, IN, false, 9);
+        while(RW2.hasNext()){
+            final String state = RW2.next();
+            System.out.println(state);
+        }
+        
+        GreedyColoring greedy = new GreedyColoring(GeoGraph);
+        VertexColoringAlgorithm.Coloring coloring = greedy.getColoring();
+        int numColors = coloring.getNumberColors();
+        System.out.println(numColors);
     }
 }
