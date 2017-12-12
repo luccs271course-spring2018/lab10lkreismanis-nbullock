@@ -9,4 +9,5 @@
 
 
 ### 2.) Give two or three examples of how/why a real-world map might require more than four colors.
-- A real-world map might require more than four colors if there are multiple disconnected regions, such as islands, more colors would be needed.  An additional example is if the map uses a color key to mark certain regions or areas.
+- A real-world map might require more than four colors if there are multiple disconnected regions, such as islands, more colors would be needed.  
+- An additional example is if the map uses a color key to mark certain regions or areas.
